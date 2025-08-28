@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       labels:
-        app: fleet-nginx
+        app: simple-nginx
         tier: demo
     spec:
       containers:
@@ -33,7 +33,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: fleet-nginx
+    app: simple-nginx
     tier: demo
   ports:
     - port: 80
