@@ -9,7 +9,7 @@ spec:
     matchLabels:
       app: simple-nginx
       tier: demo
-  replicas: 8
+  replicas: 4
   template:
     metadata:
       labels:
