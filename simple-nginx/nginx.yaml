@@ -1,7 +1,13 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: simple-nginx
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fleet-simple-nginx
+  namespace simple-nginx
   labels:
     demo: fleet
 spec:
@@ -30,6 +36,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: fleet-simple-np-service
+  namesapce: simple-nginx
 spec:
   type: NodePort
   selector:
