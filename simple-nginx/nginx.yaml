@@ -37,6 +37,9 @@ kind: Service
 metadata:
   name: fleet-simple-np-service
   namesapce: simple-nginx
+  labels:
+    app: simple-nginx
+    tier: demo
 spec:
   type: NodePort
   selector:
@@ -45,4 +48,3 @@ spec:
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 30021
