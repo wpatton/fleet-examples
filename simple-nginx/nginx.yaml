@@ -7,7 +7,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fleet-simple-nginx
-  namespace simple-nginx
+  namespace: simple-nginx
   labels:
     demo: fleet
 spec:
