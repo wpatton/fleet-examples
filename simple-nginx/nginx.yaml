@@ -36,16 +36,17 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: fleet-simple-np-service
-  namesapce: simple-nginx
   labels:
     app: simple-nginx
     tier: demo
+  name: fleet-simple-nginx
+  namespace: simple-nginx
 spec:
-  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
   selector:
     app: simple-nginx
     tier: demo
-  ports:
-    - port: 80
-      targetPort: 80
+  type: NodePort
+
