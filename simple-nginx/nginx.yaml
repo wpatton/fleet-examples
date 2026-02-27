@@ -9,7 +9,8 @@ metadata:
   name: fleet-simple-nginx
   namespace: simple-nginx
   labels:
-    demo: fleet
+    app: simple-nginx
+    tier: demo
 spec:
   selector:
     matchLabels:
